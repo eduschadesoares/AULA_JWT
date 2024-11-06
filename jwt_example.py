@@ -2,7 +2,7 @@ import jwt
 import datetime
 
 # Chave secreta para assinatura do JWT (normalmente, seria mantida segura e fora do código)
-SECRET_KEY = "sua_chave_secreta"
+SECRET_KEY = "minha_chave_secreta"
 
 # Banco de dados simples para armazenar usuários registrados
 usuarios = {}
@@ -23,8 +23,8 @@ def login(username, senha):
         payload = {
             "username": username,
             "exp": datetime.datetime.utcnow() + datetime.timedelta(minutes=5),
-            "role": "admin",
-            "permissions": ["read", "write", "delete"],
+            "role": "user",
+            "permissions": ["read", "write"],
         }
         token = jwt.encode(payload, SECRET_KEY, algorithm="HS512")
 
