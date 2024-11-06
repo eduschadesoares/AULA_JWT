@@ -23,11 +23,12 @@ def login(username, senha):
         payload = {
             "username": username,
             "exp": datetime.datetime.utcnow() + datetime.timedelta(minutes=5),
-            "role": "admin",
-            "permissions": ["read", "write"],
+            "role": "super-admin",
+            "permissions": ["read", "write", "delete"],
         }
         token = jwt.encode(payload, SECRET_KEY, algorithm="HS512")
-        print(f"Login bem-sucedido! Aqui está seu token JWT: {token}")
+
+        print(f"Login bem-sucedido! Aqui está seu token JWT:\n\n{token}")
         return token
     else:
         print("Nome de usuário ou senha incorretos!")
@@ -46,14 +47,14 @@ def acessar_recurso_protegido(token):
         print("Token inválido! Acesso negado.")
 
 # Demonstração do fluxo completo
-print("### Registro ###")
-registrar_usuario("alice", "senha123")
-registrar_usuario("bob", "senha456")
+print("### Tela de Registro ###")
+registrar_usuario("Alice", "senha123")
+registrar_usuario("João", "senha456")
 
+# Demonstração do login
 print("\n### Login ###")
-# Login bem-sucedido
-token = login("alice", "senha123")
-#token = login("bob", "senha456")
+token = login("Alice", "senha123")
+#token = login("João", "senha456")
 
 # Acesso ao recurso protegido
 if token:
@@ -61,5 +62,5 @@ if token:
     acessar_recurso_protegido(token)
 
 # Simulação de token expirado (caso queira testar manualmente, modifique a duração ou espere alguns minutos)
-print("\n### Acesso com Token Expirado ###")
-acessar_recurso_protegido(token)
+#print("\n### Acesso com Token Expirado ###")
+#acessar_recurso_protegido(token)
