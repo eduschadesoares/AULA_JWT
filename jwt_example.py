@@ -23,7 +23,7 @@ def login(username, senha):
         payload = {
             "username": username,
             "exp": datetime.datetime.utcnow() + datetime.timedelta(minutes=5),
-            "role": "super-admin",
+            "role": "admin",
             "permissions": ["read", "write", "delete"],
         }
         token = jwt.encode(payload, SECRET_KEY, algorithm="HS512")

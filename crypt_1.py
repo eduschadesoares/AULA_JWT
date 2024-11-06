@@ -32,8 +32,8 @@ if __name__ == "__main__":
 
     mensagem = input("Digite a mensagem para criptografar: ")
     mensagem_criptografada = criptografar(mensagem)
-    print(f"Mensagem criptografada: {mensagem_criptografada}")
+    print(f"\nMensagem criptografada: {mensagem_criptografada}")
 
     # Descriptografando a mensagem
     mensagem_descriptografada = descriptografar(mensagem_criptografada)
-    print(f"Mensagem descriptografada: {mensagem_descriptografada}")
+    print(f"\nMensagem descriptografada: {mensagem_descriptografada}")
