@@ -2,7 +2,7 @@
 
 Aula ministrada para a obtenção da aprovação na Disciplina de Estágio Orientado à Docência do Programa de Pós Graduação em Computação Aplicada (UEPG).
 
-Disciplina de Desenvolvimento Web para a turma do segundo ano do Curso de Engenharia de Software da Universidade Estadual de Ponta Grossa (UEPG).
+Disciplina de Desenvolvimento Web para a turma do segundo ano do Curso de Bacharelado em Engenharia de Software da Universidade Estadual de Ponta Grossa (UEPG).
 
 Confira aqui os arquivos:
 
